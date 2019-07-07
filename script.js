@@ -28,25 +28,3 @@ var main = function() {
   
   $(document).ready(main);
   
-// var main = function() {
-//   $('.more-btn').on('click', (event) => {
-//     $(event.currentTarget).siblings('.more-menu').toggle();
-//   });
-//   $('.share').on('click', (event) => {
-//     $(event.currentTarget).next().toggle();
-//   });
-  
-//   $('.notification').on('click', (event) => {
-//     // first step
-//     const target = event.target;
-//     console.log(event);
-//     // second step
-//     console.log('You clicked on the item, ', target);
-//     $(event.currentTarget).toggleClass('active');
-//   })
-  
-  
-// };
-
-// $(document).ready(main);
-  
