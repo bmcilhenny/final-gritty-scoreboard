@@ -43,6 +43,7 @@ html, body {
   .header {
     background: #000;
     margin: 0 0 40px;
+    width: 100%;
   }
   
   .header h1 {
@@ -53,6 +54,27 @@ html, body {
     padding: 40px 0;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  .notification-header {
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .notification-header .badge {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
   }
   
   /* Scorecard row */
@@ -135,8 +157,9 @@ html, body {
     color: #fff;
     margin: 0 10px 0 0;
   }
-  
+   
   .notification.active { 
     color: #ffd400;
     text-shadow: 0 0 10px #ffd400;
   } 
+  
