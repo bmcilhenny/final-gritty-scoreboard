@@ -23,9 +23,16 @@ const main = function() {
     }
 
     if (event.target.matches(".notification")) {
-      event.target.classList.contains("active")
-        ? event.target.classList.remove("active")
-        : event.target.classList.add("active");
+      const bell = event.target;
+      if (bell.classList) {
+        bell.classList.toggle("active");
+      } else {
+        // IE explorer
+        bellClassNames = bell.className.split(" ");
+        if (bellClassNames.indexOf("active") == -1) {
+          bell.className += " " + "active";
+        }
+      }
         console.log("HERE");
       let numberActive = document.querySelectorAll(".glyphicon-bell.active")
         .length;
