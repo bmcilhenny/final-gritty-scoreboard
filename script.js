@@ -14,21 +14,19 @@ const main = function() {
       //   console.log('How many items are being toggled?', menu.length);
       //  adds breakpoint
       // debugger;
-      menues.forEach(menu => {
-        if (getComputedStyle(menu).display === "none") {
-          debugger;
-          menu.style.setProperty("display", "block");
-        } else {
-          menu.style.setProperty("display", "none");
-        }
-      });
+      menuUnorderedList = event.target.nextElementSibling;
+      if (getComputedStyle(menuUnorderedList).display === "none") {
+        menuUnorderedList.style.setProperty("display", "block");
+      } else {
+        menuUnorderedList.style.setProperty("display", "none");
+      }
     }
 
     if (event.target.matches(".notification")) {
       event.target.classList.contains("active")
         ? event.target.classList.remove("active")
         : event.target.classList.add("active");
-      console.log("HERE");
+        console.log("HERE");
       let numberActive = document.querySelectorAll(".glyphicon-bell.active")
         .length;
       // we must add this check to remove the content within the notification badge and thus the notification badge itself when there are no bells currently active
